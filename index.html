@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tipkarski mojster – Spoznaj tipkovnico</title>
+<style>
+:root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#25324c;background:#eaf4ff}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 10%,#fff6ce,transparent 30%),linear-gradient(145deg,#d9eeff,#f5efff)}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:4px solid #ffb21a;outline-offset:3px}.wrap{max-width:1100px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:900;font-size:clamp(1.4rem,3vw,2.1rem);color:#2856a4}.home,.btn{border:0;border-radius:16px;padding:12px 18px;font-weight:800;background:#fff;color:#244f93;box-shadow:0 5px 0 #c8d9f3}.btn{background:#1879e8;color:white;box-shadow:0 5px 0 #1056ac}.btn.alt{background:#fff;color:#2159a4;box-shadow:0 5px 0 #b9d4ee}.btn:disabled{opacity:.45;cursor:not-allowed}.hero{background:linear-gradient(110deg,#fff,#fff7dc);border:3px solid white;border-radius:30px;padding:25px;margin:22px 0;display:flex;align-items:center;gap:22px;box-shadow:0 12px 28px #4c76a01a}.hero img{width:min(31%,230px);object-fit:contain}.hero h1{font-size:clamp(1.7rem,4vw,2.7rem);margin:0 0 8px}.hero p{line-height:1.5}.panel{background:#ffffffee;border:2px solid #fff;border-radius:25px;padding:22px;box-shadow:0 10px 24px #45648c20;margin:18px 0}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:2px solid #dce9ff;border-radius:20px;padding:18px;background:#f8fbff;text-align:left;display:flex;flex-direction:column;gap:10px}.card strong{font-size:1.12rem}.card span{line-height:1.45}.card.active{border-color:#418de8;background:#e8f4ff}.card .emoji{font-size:2rem}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.section-head h2{margin:0}.small{font-size:.93rem;color:#51627e}.keyboard{display:flex;flex-direction:column;gap:6px;margin:18px auto;max-width:960px;user-select:none}.keyrow{display:flex;justify-content:center;gap:5px}.key{position:relative;flex:1;min-width:0;height:53px;padding:4px 2px;border:1px solid #b9cce6;border-bottom:4px solid #a4b9d6;border-radius:9px;background:white;color:#263a58;font-weight:800;display:flex;align-items:center;justify-content:center;transition:background .12s,transform .12s}.key:hover{background:#e5f2ff}.key.selected,.key.flash{background:#ffdb6c;border-color:#e9a900;transform:translateY(1px)}.key.special{background:#dceeff}.key.special.selected,.key.special.flash{background:#ffdb6c}.key .sub{position:absolute;top:3px;right:5px;font-size:.63rem;font-weight:600;color:#667b97}.key.wide{flex:1.55}.key.xwide{flex:2}.key.space{flex:5}.info{background:#e8f5ff;border-left:5px solid #2982e7;border-radius:12px;padding:15px;min-height:85px;line-height:1.5}.tasks{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.pill{background:#e8f0fc;border:0;border-radius:999px;padding:9px 13px;font-weight:700;color:#355b8c}.pill.on{background:#256ed0;color:#fff}.exercise{background:#fff9e8;border:2px solid #ffe0a1;border-radius:20px;padding:18px}.target{font-size:clamp(1.5rem,4vw,2.25rem);font-weight:900;letter-spacing:.035em;color:#263c69;overflow-wrap:anywhere}.typebox{width:100%;padding:15px;font-size:1.25rem;border:3px solid #bbd6ff;border-radius:15px;background:white;margin:12px 0}.feedback{font-weight:750;min-height:28px}.good{color:#127346}.bad{color:#b04c22}.progress{height:13px;background:#dce9fa;border-radius:20px;overflow:hidden;margin:10px 0}.bar{height:100%;background:#4dbd88;width:0%;transition:width .25s}.hidden{display:none!important}.footer{text-align:center;color:#506481;font-size:.85rem;padding:20px}.badge{background:#fff0b3;border-radius:20px;padding:5px 11px;font-weight:800}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.confetti{font-size:2rem}.hint{font-size:.9rem;color:#5b6680}.focuswarn{color:#9a4a20;font-weight:700}@media(max-width:760px){.cards{grid-template-columns:1fr}.hero{flex-direction:column;text-align:center}.hero img{width:180px}.wrap{padding:12px}.panel{padding:14px}.key{height:42px;font-size:.69rem;border-radius:6px}.keyrow{gap:3px}.keyboard{gap:4px}.key .sub{font-size:.5rem;right:2px}.key.wide{flex:1.4}.key.xwide{flex:1.7}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="brand">⭐ TIPKARSKI MOJSTER</div><button class="home" id="home">🏠 Na začetek</button></header>
+<section id="welcome">
+ <div class="hero"><img src="detektiv.png" alt="Nasmejani tipkarski detektiv s povečevalnim steklom"><div><h1>Dobrodošel, tipkarski detektiv!</h1><p>Odkrivaj skrivnosti slovenske tipkovnice. Tukaj ni dirke: pomembno je, da tipke spoznaš in jih pravilno uporabljaš.</p><button class="btn" id="start">Začni spoznavati tipkovnico →</button></div></div>
+ <div class="cards"><button class="card active" id="card-intro"><span class="emoji">⌨️</span><strong>1. Spoznaj tipkovnico</strong><span>Raziskuj tipke in preizkusi velike črke, @, številke in presledke.</span><span class="badge">Odprto!</span></button><div class="card" aria-disabled="true"><span class="emoji">🔎</span><strong>2. Detektivi tipk</strong><span>Naslednja stopnja – pripraviva jo po preizkusu uvoda.</span></div><div class="card" aria-disabled="true"><span class="emoji">🏆</span><strong>3. Lov na črke</strong><span>Prihajajo besede od krajših do daljših in številčni izzivi.</span></div></div>
+</section>
+<main id="lesson" class="hidden">
+ <div class="hero"><img src="detektiv.png" alt="Tipkarski detektiv"><div><h1>1. Spoznaj tipkovnico</h1><p>Najprej klikaj tipke na sliki. Nato opravi šest kratkih izzivov s svojo pravo tipkovnico.</p><span class="badge">🔍 Radovednost je supermoč!</span></div></div>
+ <section class="panel"><div class="section-head"><h2>🔎 Razišči tipke</h2><span class="small">Klikni tipko na spodnji tipkovnici.</span></div><p class="small">Prikazana je poenostavljena slovenska tipkovnica QWERTZ. Razpored nekaterih posebnih tipk se med modeli lahko razlikuje.</p><div class="keyboard" id="keyboard" aria-label="Interaktivna slovenska tipkovnica"></div><div id="keyinfo" class="info" aria-live="polite">Izberi tipko, na primer <b>Shift</b>, <b>Caps Lock</b>, <b>Alt Gr</b> ali <b>V</b>.</div></section>
+ <section class="panel"><div class="section-head"><h2>🎯 Preizkusi, kaj znaš</h2><span class="badge" id="score">0 / 6 izzivov</span></div><p>Besedilo napiši v polje. Za uspeh ni pomembna hitrost, ampak pravilnost. Napačne črke lahko popraviš z Backspace.</p><div class="progress"><div id="bar" class="bar"></div></div><div id="taskBtns" class="tasks"></div><div class="exercise"><div class="small" id="taskType"></div><p id="taskPrompt"></p><div class="target" id="target"></div><input class="typebox" id="answer" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Vpiši odgovor" placeholder="Tipkaj tukaj ..."><div id="feedback" class="feedback" aria-live="polite"></div><div id="help" class="hint"></div><div class="actions"><button class="btn alt" id="clear">↺ Poskusi znova</button><button class="btn" id="next" disabled>Naslednji izziv →</button></div></div><div id="finished" class="hidden" aria-live="polite"><p class="confetti">🎉 ⭐ 🏆 ⭐ 🎉</p><h2>Bravo! Spoznal si tipkovnico!</h2><p>Osvojil si značko <b>Raziskovalec tipkovnice</b>. Zdaj poznaš nekaj pomembnih skrivnosti tipkanja.</p><button class="btn" id="restart">Ponovi vseh šest izzivov</button></div></section>
+</main>
+<footer class="footer">Tipkarski mojster · 1. del · Brez prijave, brez časovnega omejevanja in brez shranjevanja osebnih podatkov.</footer>
+</div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const descriptions={
+ 'Shift':'Pridrži Shift in pritisni črko, da napišeš ENO veliko črko. Na tipkovnici sta običajno dve tipki Shift.',
+ 'Caps Lock':'Enkrat pritisni Caps Lock, da pišeš z VELIKIMI črkami. Pritisni ga še enkrat, da ga izklopiš.',
+ 'Alt Gr':'Alt Gr je desna tipka Alt. Na običajni slovenski tipkovnici drži Alt Gr in pritisni V, da napišeš @.',
+ 'V':'To je črka V. Skupaj z desno tipko Alt Gr na slovenski tipkovnici napiše znak @.',
+ 'Enter':'Enter potrdi vnos ali začne novo vrstico. Pri teh vajah z njim lahko nadaljuješ, ko je odgovor pravilen.',
+ 'Backspace':'Backspace izbriše znak levo od kazalca. Uporabi ga, kadar se zmotiš.',
+ 'Preslednica':'Najdaljša tipka na tipkovnici. Z njo narediš presledek med besedami.',
+ 'Tab':'Tab premakne kazalec ali izbiro v naslednje polje.',
+ 'Esc':'Esc pogosto zapre meni ali prekine trenutno dejanje.',
+ 'Š':'Š je slovenska črka – šumnik. Za veliko Š uporabi Shift + Š.',
+ 'Č':'Č je slovenska črka – šumnik. Za veliko Č uporabi Shift + Č.',
+ 'Ž':'Ž je slovenska črka – šumnik. Za veliko Ž uporabi Shift + Ž.',
+ '0':'Številke najdeš v zgornji vrstici nad črkami. Vadi jih tudi tam, ne le na desnem številskem delu.'};
+const rows=[
+ [['Esc',1.1],['1'],['2'],['3'],['4'],['5'],['6'],['7'],['8'],['9'],['0'],['+',1],['\'',1],['Backspace',2]],
+ [['Tab',1.55],...Array.from('QWERTZUIOPŠĐ').map(x=>[x]),['Enter',1.9]],
+ [['Caps Lock',2],...Array.from('ASDFGHJKLČĆ').map(x=>[x]),['Enter',1.1]],
+ [['Shift',2.1],...Array.from('ŽYXCVBNM').map(x=>[x]),[','],['.'],['-'],['Shift',2.2]],
+ [['Ctrl',1.2],['Alt',1.2],['Preslednica',5],['Alt Gr',1.5],['Ctrl',1.2]]
+];
+// The diagram is schematic: key widths and some punctuation positions differ across physical models.
+const keyboard=$('keyboard');const keyEls=[];
+rows.forEach(row=>{const div=document.createElement('div');div.className='keyrow';row.forEach(([name,w=1])=>{const b=document.createElement('button');b.type='button';b.className='key'+(['Shift','Caps Lock','Alt Gr','Backspace','Enter','Preslednica','Tab'].includes(name)?' special':'');b.textContent=name;b.style.flex=String(w);b.dataset.key=name;b.title='Spoznaj tipko '+name;b.addEventListener('click',()=>selectKey(name,b));div.append(b);keyEls.push(b)});keyboard.append(div)});
+function selectKey(name,button){keyEls.forEach(x=>x.classList.toggle('selected',x===button));$('keyinfo').innerHTML='<b>'+escapeHtml(name)+'</b>: '+(descriptions[name]||(/^[0-9]$/.test(name)?'To je številka '+name+'. Poišči jo v zgornji vrstici tipkovnice.':'Poišči to tipko tudi na svoji fizični tipkovnici. Za veliko črko uporabi Shift.'))}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+const tasks=[
+ {type:'VELIKA ZAČETNICA',prompt:'Drži Shift in napiši veliko začetnico. Nato nadaljuj z malimi črkami.',target:'Maja',help:'Shift + M, nato spusti Shift in napiši aja.'},
+ {type:'SAMO VELIKE ČRKE',prompt:'Vklopi Caps Lock, napiši besedo, nato ga IZKLOPI.',target:'RAČUNALNIK',help:'Caps Lock → napiši besedo → Caps Lock še enkrat.'},
+ {type:'ZNAK @',prompt:'Uporabi Alt Gr + V in napiši spodnji e-poštni naslov.',target:'ucenec@sola.si',help:'Na slovenski tipkovnici: desni Alt (Alt Gr) + V.'},
+ {type:'ŠTEVILKE',prompt:'Števke poišči v zgornji vrstici nad črkami.',target:'2026',help:'Poišči 2, 0, 2 in 6.'},
+ {type:'PRESLEDNICA IN ŠUMNIKI',prompt:'Med besedama naredi presledek. Ne pozabi na šumnik.',target:'moja šola',help:'Beseda moja + preslednica + šola.'},
+ {type:'MEŠANI IZZIV',prompt:'Uporabi veliko začetnico, presledek, število in piko.',target:'Razred 4.',help:'Shift + R za veliko začetnico. Za besedo naredi presledek.'}
+];
+let current=0;const completed=new Set();
+function renderTask(){const t=tasks[current];$('taskType').textContent='IZZIV '+(current+1)+' OD '+tasks.length+' · '+t.type;$('taskPrompt').textContent=t.prompt;$('target').textContent=t.target;$('help').textContent='Namig: '+t.help;$('answer').value='';$('feedback').textContent='';$('feedback').className='feedback';$('next').disabled=true;$('next').textContent=current===tasks.length-1?'Poglej dosežek 🏆':'Naslednji izziv →';$('finished').classList.add('hidden');$('taskBtns').innerHTML='';tasks.forEach((task,i)=>{const b=document.createElement('button');b.className='pill'+(i===current?' on':'');b.textContent=(completed.has(i)?'✓ ':'')+(i+1)+'. '+task.type.toLowerCase();b.addEventListener('click',()=>{current=i;renderTask()});$('taskBtns').append(b)});$('score').textContent=completed.size+' / 6 izzivov';$('bar').style.width=(completed.size/tasks.length*100)+'%';$('answer').focus()}
+$('answer').addEventListener('input',()=>{const val=$('answer').value,t=tasks[current];if(val===t.target){completed.add(current);$('feedback').textContent='⭐ Odlično! Pravilen zapis.';$('feedback').className='feedback good';$('next').disabled=false;$('score').textContent=completed.size+' / 6 izzivov';$('bar').style.width=(completed.size/tasks.length*100)+'%'}else{$('next').disabled=true;const ok=t.target.startsWith(val);$('feedback').textContent=val.length?(ok?'Kar tako naprej!':'Preveri zapis in po potrebi uporabi Backspace.'):'Tipkaj počasi in natančno.';$('feedback').className='feedback '+(ok?'':'bad')}});
+$('answer').addEventListener('keydown',e=>{if(e.key==='Enter'&&!$('next').disabled){e.preventDefault();$('next').click()}});
+$('next').addEventListener('click',()=>{if($('next').disabled)return;if(current<tasks.length-1){current++;renderTask()}else{if(completed.size===tasks.length){$('finished').classList.remove('hidden');$('finished').scrollIntoView({behavior:'smooth',block:'center'})}else{current=tasks.findIndex((_,i)=>!completed.has(i));renderTask()}}});
+$('clear').addEventListener('click',()=>{ $('answer').value='';$('feedback').textContent='';$('next').disabled=true;$('answer').focus()});
+$('restart').addEventListener('click',()=>{completed.clear();current=0;renderTask();window.scrollTo({top:0,behavior:'smooth'})});
+function openLesson(){$('welcome').classList.add('hidden');$('lesson').classList.remove('hidden');renderTask();window.scrollTo({top:0,behavior:'smooth'})}
+$('start').addEventListener('click',openLesson);$('card-intro').addEventListener('click',openLesson);
+$('home').addEventListener('click',()=>{$('lesson').classList.add('hidden');$('welcome').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})});
+</script>
+</body></html>
